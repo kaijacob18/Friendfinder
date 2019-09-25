@@ -16,11 +16,11 @@
 <h4>Name (Required)</h4>
 <input type="text" id="name" class="form-control" required="">
 <h4>Link to Photo Image</h4>
-<input type="text" id="name" class="form-control" required="">
+<input type="text" id="photo" class="form-control" required="">
 <hr>
 <h3><strong>Question 1</strong></h3>
 <h4>You enjoy being in presence of children.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q1"  >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -30,7 +30,7 @@
       </select>
 <h3><strong>Question 2</strong></h3>
 <h4>Constantly exercising at least 3 times a week.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q2" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -40,7 +40,7 @@
       </select>
 <h3><strong>Question 3</strong></h3>
 <h4>Plans on getting married 1 day.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q3"  >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -50,7 +50,7 @@
       </select>
 <h3><strong>Question 4</strong></h3>
 <h4>Seafood is a favorite meal to eat.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q4"  >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -60,7 +60,7 @@
       </select>
 <h3><strong>Question 5</strong></h3>
 <h4>You rarely go out on the weekend.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q5"  >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -70,7 +70,7 @@
       </select>
 <h3><strong>Question 6</strong></h3>
 <h4>It's difficult to relate to other's feelings.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q6" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -80,7 +80,7 @@
       </select>
 <h3><strong>Question 7</strong></h3>
 <h4>It's hard to be untruthful even if feelings are involved.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q7" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -90,7 +90,7 @@
       </select>
 <h3><strong>Question 8</strong></h3>
 <h4>Hard to agree w/ wrong doing even if it's family.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q8" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -100,7 +100,7 @@
       </select>
 <h3><strong>Question 9</strong></h3>
 <h4>You feel more energetic around group of people.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q9" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -110,7 +110,7 @@
       </select>
 <h3><strong>Question 10</strong></h3>
 <h4>You feel motivated when being under estimated amongst peers.</h4>
-<select class="chosen-select" id="q2" style="display: none;">
+<select class="chosen-select" id="q10" >
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -118,16 +118,40 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-        Submit<select class="chosen-select" id="q2" style="display: none;">
-         <option value=""></option>
-         <option value="1">1 (Strongly Disagree)</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5 (Strongly Agree)</option>
-       </select></button>
-       
+
+      <br><br>
+      <button type="submit" class="btn btn-primary"  id="submit"> Submit 
+
+      </button>
+
+      
+
+<!-- Modal -->
+<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Friend Finder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JavaScript CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
        <script type="text/javascript">
             $("#submit").on("click", function() {
               function validateForm() {
@@ -157,11 +181,13 @@
                     $("#q10").val()
                   ]
                 };
-                var currentURL = window.location.origin;
-                $.post(currentURL + "/api/friends", userData, function(data) {
-                  $("#matchName").text(data.name);
-                  $("#matchImg").attr("src", data.photo);
-                  $("#resultsModal").modal("toggle");
+             
+                $.post("/api/friends", userData, function(data) {
+                  console.log(data)
+                  
+                  $(".modal-body").append("<h1>"+data.name+"</h1>")
+                  $(".modal-body").append("<img src='"+data.urlImage+"' style='width:50%; height:50%' /> ")
+                  $("#resultsModal").modal("show");
                 });
               } else {
                 alert("Please fill out all fields before submitting!");

@@ -140,7 +140,7 @@
          
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtn">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
@@ -153,6 +153,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
        <script type="text/javascript">
+       $("#closeBtn").on("click",function(){
+             location.reload();
+       })
             $("#submit").on("click", function() {
               function validateForm() {
                 var isValid = true;
@@ -184,7 +187,7 @@
              
                 $.post("/api/friends", userData, function(data) {
                   console.log(data)
-                  
+                  $(".modal-body").empty()
                   $(".modal-body").append("<h1>"+data.name+"</h1>")
                   $(".modal-body").append("<img src='"+data.urlImage+"' style='width:50%; height:50%' /> ")
                   $("#resultsModal").modal("show");

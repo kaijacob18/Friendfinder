@@ -26,21 +26,32 @@ module.exports = function (app) {
           var results =0;
 console.log(tableData.length)
         for (var i=0; i < tableData.length; i++) {
-               console.log(tableData[i].friendScores.length)
+               //console.log(tableData[i].friendName)
+               results=0;
             for (var j = 0; j < tableData[i].friendScores.length; j++) {
-                results += parseInt(userCurrentdata.friendScores[j]) - parseInt( tableData[i].friendScores[j]);
+                results += Math.abs( parseInt(userCurrentdata.friendScores[j]) - parseInt( tableData[i].friendScores[j]));
+
+               // console.log(results)
             }
-           
+             
             storeTotaldifference.push({
                 name: tableData[i].friendName,
                 urlImage: tableData[i].friendPhoto,
-                totalDifference: Math.abs(results)
+                totalDifference: results
             });
         } //end forloop
          
-        storeTotaldifference.sort(function(a, b){return b - a})
+      //  friends.push(userCurrentdata)​
+        // console.log( userCurrentdata)
+        // console.log( friends) 
 
-        // tableData.push(userCurrentdata)​
+        friends.push(userCurrentdata)
+
+        storeTotaldifference.sort(function(a, b){return a.totalDifference - b.totalDifference})
+
+
+        
+
 
        console.log(storeTotaldifference)
        res.json(storeTotaldifference[0])
